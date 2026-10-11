@@ -13,3 +13,9 @@
     }
   }
 }
+
+void main() {
+  Compte compte = Compte('12345');
+  compte.depot(150.0);
+  print('Solde du compte ${compte.numeroCompte} : ${compte.solde}');
+}
