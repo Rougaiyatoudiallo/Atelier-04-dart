@@ -8,4 +8,16 @@
     _x += dx;
     _y += dy;
   }
+
+  void display() {
+    print('x: $_x, y: $_y');
+  }
+}
+
+void main() {
+  Point point = Point(2, 5);
+  point.display();
+
+  point.move(-1, 3);
+  point.display();
 }
