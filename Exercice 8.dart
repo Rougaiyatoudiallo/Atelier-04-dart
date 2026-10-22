@@ -15,3 +15,21 @@ class Livre {
     print('Total livres: $totalLivres');
   }
 }
+
+class Roman extends Livre {
+  String genre;
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+  @override
+  void afficherInfos() {
+    super.afficherInfos();
+    print('Genre: $genre');
+  }
+}
+
+void main() {
+  var l = Livre('L1', 'A1');
+  l.afficherInfos();
+  var r = Roman('R1', 'A2', 'Policier');
+  r.afficherInfos();
+  Livre.afficherTotal();
+}
