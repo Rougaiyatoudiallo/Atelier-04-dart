@@ -25,3 +25,13 @@ class Film extends Media {
     print('Ceci est un Film: $titre, durée : $dureeMinutes min.');
   }
 }
+
+void main() {
+  List<Media> catalogue = [
+    Livre('Les Misérables', 'Victor Hugo'),
+    Film('Avatar', 162),
+  ];
+  for (var m in catalogue) {
+    m.afficherType();
+  }
+}
