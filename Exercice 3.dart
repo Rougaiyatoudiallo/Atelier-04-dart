@@ -1,11 +1,11 @@
-// Exercice 3: Compte Bancaire
+// Gestion sécurisée du solde bancaire (Exercice 3)
 class Compte {
-  double _solde = 0.0;
-
   final String numeroCompte;
+  double _solde;
 
   Compte(this.numeroCompte, [this._solde = 0.0]);
-  String get solde => '$(_solde.toStringAsFixed(2)) \$';
+
+  String get solde => '${_solde.toStringAsFixed(2)} \$';
 
   void depot(double montant) {
     if (montant > 0) {
@@ -15,7 +15,7 @@ class Compte {
 }
 
 void main() {
-  var c = Compte('FR123', 100.0);
-  c.depot(50.0);
-  print(c.solde);
+  var compte = Compte('FR123', 0.0);
+  compte.depot(150.0);
+  print(compte.solde);
 }
