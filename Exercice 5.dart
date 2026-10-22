@@ -7,3 +7,16 @@ abstract class Forme {
     print('Calcul de l\\'aire...');
   }
 }
+
+class Cercle extends Forme {
+  final double rayon;
+  Cercle(this.rayon);
+  @override
+  double calculerAire() => math.pi * rayon * rayon;
+}
+class Rectangle extends Forme {
+  final double longueur, largeur;
+  Rectangle(this.longueur, this.largeur);
+  @override
+  double calculerAire() => longueur * largeur;
+}
