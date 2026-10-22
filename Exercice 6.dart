@@ -17,3 +17,11 @@ class BaseDeDonnees implements Connectable {
   @override
   void deconnecter() => print('BDD: Déconnexion réussie.');
 }
+
+void main() {
+  List<Connectable> services = [ServeurAPI(), BaseDeDonnees()];
+  for (var s in services) {
+    s.connecter('Admin');
+    s.deconnecter();
+  }
+}
