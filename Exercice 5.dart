@@ -20,3 +20,12 @@ class Rectangle extends Forme {
   @override
   double calculerAire() => longueur * largeur;
 }
+
+void main() {
+  var c = Cercle(3);
+  c.afficherMessage();
+  print(c.calculerAire());
+  var r = Rectangle(4, 5);
+  r.afficherMessage();
+  print(r.calculerAire());
+}
